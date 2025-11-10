@@ -1,0 +1,9 @@
+segment,customer_count,total_revenue,avg_revenue,avg_frequency,avg_recency
+Champions,2145,2812408.44,1311.15,13.1,21.8
+Loyal Customers,1412,897769.57,635.81,6.37,110.23
+New Customers,2926,442123.08,151.1,1.53,120.63
+Regular,2234,365217.16,163.48,1.66,521.35
+Potential Loyalists,869,255438.29,293.95,3.01,106.03
+Hibernating,2170,233835.47,107.76,1.21,767.26
+Can't Lose Them,205,74604.85,363.93,1.99,733.85
+At Risk,18,6685.2,371.4,4.44,692.39
