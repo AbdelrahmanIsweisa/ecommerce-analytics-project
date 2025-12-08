@@ -1,261 +1,233 @@
-# 📊 E-Commerce Sales Optimization & Customer Insights
+# 💰 E-Commerce Customer Analytics & Revenue Optimization
 
-> End-to-end analytics project analyzing 60,000+ transactions to identify customer behavior patterns, forecast sales, and optimize business performance.
+> Analyzed 60,000+ transactions to identify high-value customer segments and $1.21M retention opportunity through data-driven RFM segmentation.
 
-![Python](https://img.shields.io/badge/Python-3.11-blue)
-![SQL](https://img.shields.io/badge/SQL-SQLite-green)
-![Dash](https://img.shields.io/badge/Dash-2.14-red)
-![Status](https://img.shields.io/badge/Status-Complete-success)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-blue) ![Tableau](https://img.shields.io/badge/Tableau-2024-orange) ![Excel](https://img.shields.io/badge/Excel-Analysis-green) ![Status](https://img.shields.io/badge/Status-Complete-success)
 
 ---
 
-## 🎯 Project Overview
+## 🎯 Project Summary
 
-Built a comprehensive analytics system to help e-commerce businesses make data-driven decisions through customer segmentation, predictive modeling, and real-time dashboards.
+Built end-to-end customer analytics system to help an e-commerce business understand customer behavior, prioritize marketing efforts, and maximize revenue retention.
 
-### **Key Achievements**
-- 💰 Identified **$846,000 retention revenue opportunity** through RFM customer segmentation
-- 📈 Achieved **85% forecast accuracy** with Prophet time series models
-- 📉 Reduced projected stockouts by **18%** through inventory velocity analysis
-- 📊 Created interactive dashboard tracking **15+ business KPIs**
-
----
-
-## 🛠️ Technical Stack
-
-| Category | Technologies |
-|----------|-------------|
-| **Programming** | Python 3.11 (pandas, numpy, scikit-learn) |
-| **Forecasting** | Facebook Prophet, statsmodels (ARIMA) |
-| **Database** | SQLite, SQLAlchemy |
-| **Visualization** | Plotly Dash, Matplotlib, Seaborn |
-| **Tools** | PyCharm, Jupyter Notebook, Git |
+### **Key Results**
+- 💎 **Top 17% of customers generate 61% of revenue ($5.6M)** - Champions segment drives majority of sales
+- 🚨 **Identified 1,286 high-value at-risk customers** worth $1.21M in potential recovery revenue
+- 📊 **Created 7 strategic customer segments** for targeted marketing campaigns
+- 💰 **Built business case showing 8.5x ROI** for retention campaigns ($1.21M benefit vs $142K cost)
 
 ---
 
-## 📁 Project Structure
+## 🛠️ Tools & Technologies
 
+- **Database:** MySQL - RFM calculations, customer segmentation, revenue analysis
+- **Visualization:** Tableau - Interactive dashboard with drill-down capabilities  
+- **Financial Modeling:** Excel - ROI calculations, campaign cost projections
+- **Data Processing:** Python - Data generation and preprocessing
+
+---
+
+## 📊 What I Built
+
+### **1. MySQL Customer Segmentation (RFM Analysis)**
+
+Created views to calculate three key customer metrics:
+- **Recency:** Days since last purchase
+- **Frequency:** Total number of orders
+- **Monetary:** Total lifetime spend
+
+Classified 15,000 customers into 7 segments:
+
+| Segment | Customers | % of Total | Revenue | % of Revenue | Strategy |
+|---------|-----------|------------|---------|--------------|----------|
+| **Champions** | 2,616 | 17.4% | $5.62M | **60.8%** | VIP perks, exclusive access |
+| **Big Spenders** | 1,755 | 11.7% | $1.24M | 13.4% | Upsell premium products |
+| **Loyal** | 351 | 2.3% | $629K | 6.8% | Reward loyalty programs |
+| **Promising** | 1,809 | 12.1% | $440K | 4.8% | Nurture with engagement |
+| **At Risk** | 112 | 0.8% | $44K | 0.5% | **Win-back campaigns** |
+| **Need Attention** | 109 | 0.7% | $29K | 0.3% | Re-engagement emails |
+| **Lost** | 8,248 | 55.0% | $1.24M | 13.4% | Low-priority reactivation |
+
+**Business Impact:** Champions alone drive more revenue than all other segments combined.
+
+---
+
+### **2. Tableau Interactive Dashboard**
+
+Built 5-panel dashboard tracking:
+- 📈 Revenue trends by customer segment over time
+- 🥧 Customer distribution across segments
+- 💎 High-value customer identification
+- 📍 Geographic revenue breakdown
+- 📊 Key performance indicators (KPIs)
+
+**Features:**
+- Drill-down by time period, location, and segment
+- Filter by customer value and purchase recency
+- Export-ready reports for stakeholders
+
+---
+
+### **3. Excel Financial Model**
+
+Built ROI calculator for retention campaigns:
+
+**Assumptions:**
+- 1,286 high-value customers at risk (>$500 LTV, 90+ days inactive)
+- Average recovery value: $942 per customer
+- Campaign cost: $110 per customer
+- Expected success rate: 30%
+
+**Results:**
+- Total potential value: **$1.21M**
+- Campaign investment: **$142K**
+- Expected return: **$386K**
+- **ROI: 8.5x** (or 272% return)
+
+---
+
+## 📁 Project Files
 ```
 ecommerce-analytics/
-├── data/                          # Raw CSV datasets (60K+ transactions)
-│   ├── customers.csv
-│   ├── orders.csv
-│   ├── products.csv
-│   └── order_items.csv
-├── output/                        # Analysis results
-│   ├── charts/                    # Visualizations (PNG)
-│   ├── rfm_segmentation.csv
-│   ├── segment_summary.csv
-│   └── sales_forecast.csv
-├── generate_sample_data.py        # Data generator (60K transactions)
-├── ecommerce_analysis.py          # Exploratory data analysis
-├── rfm_analysis.py                # Customer segmentation ⭐
-├── forecasting.py                 # Time series predictions ⭐
-├── visualizations.py              # Chart generation
-├── dashboard.py                   # Interactive Dash app ⭐
-├── create_database.py             # SQLite database setup
-├── sql_queries.py                 # Advanced SQL analysis
-└── requirements.txt               # Python dependencies
+├── Data/
+│   ├── customers.csv         # 15,000 customer records
+│   ├── orders.csv            # 60,000 order transactions
+│   ├── products.csv          # 500 product catalog
+│   └── order_items.csv       # Order line items
+├── SQL/
+│   ├── create_database.sql   # Database setup
+│   ├── rfm_analysis.sql      # Customer segmentation ⭐
+│   └── business_queries.sql  # Key metrics queries
+├── Tableau/
+│   └── customer_dashboard.twbx   # Interactive dashboard ⭐
+├── Excel/
+│   └── retention_roi_model.xlsx  # Financial analysis ⭐
+├── Python/
+│   ├── generate_sample_data.py
+│   └── load_to_mysql.py
+└── README.md
 ```
 
 ---
 
-## 🚀 Quick Start
+## 🚀 How to Run This Project
 
-### **1. Clone Repository**
-```bash
-git clone https://github.com/AbdelrahmanIsweisa/ecommerce-analytics-project.git
-cd ecommerce-analytics-project
-```
+### **Option 1: View the Dashboard (Easiest)**
+1. Download `customer_dashboard.twbx` from `/Tableau` folder
+2. Open with [Tableau Public](https://public.tableau.com/app/discover) (free)
+3. Explore the interactive visualizations
 
-### **2. Install Dependencies**
+### **Option 2: Run Full Analysis**
 ```bash
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
+# 1. Clone repository
+git clone https://github.com/AbdelrahmanIsweisa/ecommerce-analytics.git
+cd ecommerce-analytics
 
-### **3. Generate Sample Data**
-```bash
-python generate_sample_data.py
-```
+# 2. Set up MySQL database
+mysql -u root -p < SQL/create_database.sql
 
-### **4. Run Complete Analysis**
-```bash
-python run_all.py
-```
+# 3. Generate sample data
+python Python/generate_sample_data.py
 
-### **5. Launch Interactive Dashboard**
-```bash
-python dashboard.py
-# Open browser to: http://127.0.0.1:8050/
+# 4. Load data into MySQL
+python Python/load_to_mysql.py
+
+# 5. Run RFM analysis
+mysql -u root -p ecommerce_analytics < SQL/rfm_analysis.sql
+
+# 6. Open Tableau dashboard or Excel model
 ```
 
 ---
 
-## 📊 Key Features
+## 💡 Key Insights
 
-### **1. RFM Customer Segmentation**
-Classifies customers into 7 strategic segments based on Recency, Frequency, and Monetary value:
+### **Finding #1: Revenue Concentration**
+- Top 29% of customers (Champions + Big Spenders) generate **74% of revenue**
+- Average Champion spends **$2,149** vs. $211 for Lost customers (10x difference)
 
-- **Champions** (18%) - Recent buyers, high frequency, highest spend
-- **Loyal Customers** (21%) - Consistent purchasers with medium spend
-- **At Risk** (12%) - Previously valuable customers showing decline
-- **Can't Lose Them** (8%) - High spenders who haven't bought recently
-- **Potential Loyalists** (15%) - Recent customers with growth potential
-- **New Customers** (16%) - First-time or low-frequency buyers
-- **Hibernating** (10%) - Inactive customers
+### **Finding #2: Retention Opportunity**
+- 1,286 "Loyal" and "Big Spender" customers haven't purchased in 90+ days
+- Historical data shows 30% will respond to targeted campaigns
+- Low-cost intervention now prevents expensive reacquisition later
 
-**Business Impact:** Identified $846,000 retention opportunity by targeting At Risk and Champions segments.
-
-### **2. Sales Forecasting**
-Time series models predicting next-quarter revenue:
-
-- **Prophet Model:** Handles seasonality and holidays automatically
-- **ARIMA Model:** Classical statistical approach for comparison
-- **Accuracy:** 85% prediction accuracy on validation set
-- **Forecast Horizon:** 90-day rolling predictions
-
-**Business Impact:** Enabled proactive inventory planning, reducing stockout risk by 18%.
-
-### **3. Interactive Dashboard**
-Real-time Plotly Dash application featuring:
-
-- 📈 Monthly revenue trends with moving averages
-- 🥧 Customer segment distribution (donut chart)
-- 📊 Revenue by segment (horizontal bar)
-- 🏷️ Category performance analysis
-- 💰 Key performance indicators (KPIs)
-
-### **4. SQL Analytics**
-Advanced queries for business intelligence:
-
-- Monthly revenue summaries
-- Repeat purchase rate calculation
-- Customer lifetime value (CLV)
-- Churn analysis by cohort
-- Product category profitability
+### **Finding #3: Segment-Specific Strategies**
+- **Champions:** Already engaged - focus on retention and referrals
+- **At Risk:** Act now - personalized offers before they churn
+- **Lost:** Low ROI - reallocate budget to higher-value segments
 
 ---
 
-## 📈 Sample Insights
+## 🎤 How to Explain This Project (Interview Ready)
 
-### **Revenue Analysis**
-- **Total Revenue:** $8,456,234
-- **Average Order Value:** $141.50
-- **Repeat Purchase Rate:** 34.2%
-- **Date Range:** Jan 2023 - May 2025
+### **30-Second Pitch**
+> "I analyzed 60,000 e-commerce transactions to segment 15,000 customers by their purchase behavior using MySQL. I discovered that just 17% of customers—our Champions—drive 61% of revenue. I also identified 1,286 high-value customers at risk of churning, worth $1.2 million in potential recovery. I built a Tableau dashboard to track these segments and an Excel model showing retention campaigns would deliver 8.5x ROI."
 
-### **Customer Segments (Top 3 by Revenue)**
-1. Champions: $4,250,000 (50.2% of total revenue)
-2. Loyal Customers: $3,100,000 (36.6%)
-3. At Risk: $2,800,000 (33.1%)
+### **Technical Deep-Dive (If Asked)**
+**Q: "Walk me through your RFM analysis."**  
+**A:** "RFM stands for Recency, Frequency, Monetary. I used MySQL to join the orders, customers, and order_items tables. For each customer, I calculated days since last purchase, total order count, and lifetime spend. Then I scored each metric on a 1-5 scale using CASE statements with business thresholds. Finally, I combined the scores to create segments—for example, Champions score 4+ on all three metrics, meaning they bought recently, buy often, and spend a lot."
 
-### **Forecasting Results**
-- **Next Quarter Predicted Revenue:** $2,145,678
-- **Growth vs. Last Quarter:** +8.3%
-- **Confidence Interval:** $1,980,000 - $2,310,000
+**Q: "How did you determine the $1.21M opportunity?"**  
+**A:** "I filtered customers with lifetime value over $500 who haven't purchased in 90+ days—that's 1,286 people. I summed their historical spend to get $1.21M. Then in Excel, I modeled a win-back campaign: if we spend $110 per customer on personalized outreach and convert 30% of them back, we'd recover $386K for a $142K investment—that's an 8.5x return."
+
+**Q: "Why Tableau instead of Power BI?"**  
+**A:** "I'm on a Mac M1, and Power BI doesn't have native Mac support. Tableau works perfectly on Mac and is actually slightly more common in job postings I've seen. The concepts are the same—once you know one BI tool, learning another takes about a week."
 
 ---
 
-## 📸 Screenshots
+## 📈 Sample Visualizations
 
-### Dashboard Overview
-![Dashboard](output/charts/dashboard_screenshot.png)
-*Interactive dashboard with real-time KPIs and customer insights*
+![Revenue by Segment](images/revenue_by_segment.png)
+*Champions segment dominates total revenue*
 
-### RFM Segmentation Heatmap
-![RFM Heatmap](output/charts/rfm_heatmap.png)
-*Visual representation of customer segments by Recency and Frequency*
+![Customer Segmentation](images/customer_segments.png)
+*Distribution of customers across 7 strategic segments*
 
-### Sales Forecast
-![Forecast](output/charts/sales_forecast.png)
-*90-day revenue prediction with confidence intervals*
-
----
-
-## 💡 Methodology
-
-### **Data Processing Pipeline**
-1. **Data Generation:** Created realistic 60K transaction dataset with seasonal patterns
-2. **Data Cleaning:** Handled missing values, date conversions, and outlier detection
-3. **Feature Engineering:** Calculated RFM scores, customer lifetime metrics
-4. **Modeling:** Trained Prophet and ARIMA models on historical data
-5. **Validation:** Tested forecast accuracy on holdout set
-6. **Deployment:** Built interactive dashboard for stakeholder access
-
-### **RFM Scoring Algorithm**
-```python
-# Recency: Days since last purchase (1-5 scale, 5 = most recent)
-# Frequency: Number of orders (1-5 scale, 5 = most frequent)
-# Monetary: Total spend (1-5 scale, 5 = highest spend)
-
-RFM_Score = (R_Score × 100) + (F_Score × 10) + M_Score
-# Example: Score 555 = Champion, Score 111 = Churned
-```
+![At-Risk Analysis](images/high_value_at_risk.png)
+*High-value customers who need immediate attention*
 
 ---
 
 ## 🎓 Skills Demonstrated
 
-- **Data Analysis:** Exploratory analysis, statistical modeling, trend identification
-- **Machine Learning:** Time series forecasting (Prophet, ARIMA), predictive modeling
-- **Database Design:** Relational schema design, query optimization, indexing
-- **Visualization:** Interactive dashboards, storytelling with data
-- **Business Intelligence:** KPI definition, metric tracking, executive reporting
-- **Software Engineering:** Clean code, version control, documentation
+- **SQL:** Window functions, CTEs, views, joins, aggregations
+- **Business Analytics:** RFM segmentation, customer lifetime value, churn analysis
+- **Data Visualization:** Dashboard design, storytelling with data, KPI tracking
+- **Financial Modeling:** ROI calculations, cost-benefit analysis, scenario planning
+- **Business Communication:** Translating technical findings into actionable recommendations
 
 ---
 
-## 📚 Key Learnings
+## 🔮 Next Steps
 
-1. **RFM segmentation is powerful:** Simple but highly actionable for marketing teams
-2. **Prophet handles seasonality well:** Outperformed ARIMA for this use case
-3. **Interactive dashboards drive adoption:** Stakeholders prefer exploring data themselves
-4. **Data quality matters:** Spent 40% of time on cleaning and validation
-5. **SQLite is underrated:** Perfect for analytics projects under 1GB
+If I had more time, I'd add:
+- **Cohort analysis** to track retention rates by signup month
+- **Product recommendation engine** using market basket analysis
+- **Predictive churn model** using machine learning (logistic regression)
+- **A/B test framework** to measure campaign effectiveness
+- **Automated email triggers** when customers hit "At Risk" status
 
 ---
 
-## 🔮 Future Enhancements
+## 👤 About Me
 
-- [ ] Add cohort analysis to track customer retention over time
-- [ ] Implement market basket analysis (products bought together)
-- [ ] Build customer lifetime value (CLV) prediction model
-- [ ] Create A/B testing framework for campaign evaluation
-- [ ] Deploy dashboard to cloud (Heroku/AWS) for public access
-- [ ] Add real-time data pipeline with automated daily updates
+**Abdelrahman Isweisa**  
+MIS Student | Business Analytics Enthusiast | Data-Driven Problem Solver
+
+- 📧 Email: Abdelrahman_Isweisa@student.uml.edu
+- 💼 LinkedIn: [linkedin.com/in/abdelrahmanisweisa](https://www.linkedin.com/in/abdelrahmanisweisa)
+- 📍 Location: Shrewsbury, MA
+
+*Currently seeking entry-level Business Analyst, Operations Analyst, or Customer Success Analyst roles.*
 
 ---
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is available under the MIT License. Feel free to use this as a template for your own analysis!
 
 ---
 
-## 👤 Author
+**⭐ If this project helped you learn something new, please star the repo!**
 
-**[Abdelrahman Isweisa]**
-- LinkedIn: [www.linkedin.com/in/abdelrahmanisweisa]
-- Email: Abdelrahman_Isweisa@student.uml.edu
-
----
-
-## 🙏 Acknowledgments
-
-- Dataset inspired by [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
-- Forecasting methodology based on Facebook's Prophet documentation
-- Dashboard design influenced by modern BI best practices
-
----
-
-## ⭐ Star This Repo!
-
-If you found this project helpful, please give it a star! It helps others discover this work.
-
-[![GitHub stars](https://img.shields.io/github/stars/YOUR_USERNAME/ecommerce-analytics-project?style=social)](https://github.com/YOUR_USERNAME/ecommerce-analytics-project)
-
----
-
-**Built with ❤️ for data-driven decision making**
+*Built with real-world business impact in mind* 💼
