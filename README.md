@@ -156,24 +156,6 @@ mysql -u root -p ecommerce_analytics < SQL/rfm_analysis.sql
 - **At Risk:** Act now - personalized offers before they churn
 - **Lost:** Low ROI - reallocate budget to higher-value segments
 
----
-
-## 🎤 How to Explain This Project (Interview Ready)
-
-### **30-Second Pitch**
-> "I analyzed 60,000 e-commerce transactions to segment 15,000 customers by their purchase behavior using MySQL. I discovered that just 17% of customers—our Champions—drive 61% of revenue. I also identified 1,286 high-value customers at risk of churning, worth $1.2 million in potential recovery. I built a Tableau dashboard to track these segments and an Excel model showing retention campaigns would deliver 8.5x ROI."
-
-### **Technical Deep-Dive (If Asked)**
-**Q: "Walk me through your RFM analysis."**  
-**A:** "RFM stands for Recency, Frequency, Monetary. I used MySQL to join the orders, customers, and order_items tables. For each customer, I calculated days since last purchase, total order count, and lifetime spend. Then I scored each metric on a 1-5 scale using CASE statements with business thresholds. Finally, I combined the scores to create segments—for example, Champions score 4+ on all three metrics, meaning they bought recently, buy often, and spend a lot."
-
-**Q: "How did you determine the $1.21M opportunity?"**  
-**A:** "I filtered customers with lifetime value over $500 who haven't purchased in 90+ days—that's 1,286 people. I summed their historical spend to get $1.21M. Then in Excel, I modeled a win-back campaign: if we spend $110 per customer on personalized outreach and convert 30% of them back, we'd recover $386K for a $142K investment—that's an 8.5x return."
-
-**Q: "Why Tableau instead of Power BI?"**  
-**A:** "I'm on a Mac M1, and Power BI doesn't have native Mac support. Tableau works perfectly on Mac and is actually slightly more common in job postings I've seen. The concepts are the same—once you know one BI tool, learning another takes about a week."
-
----
 
 ## 📈 Sample Visualizations
 
