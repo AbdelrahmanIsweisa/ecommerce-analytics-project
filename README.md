@@ -349,25 +349,6 @@ ORDER BY SUM(monetary_value) DESC;
 
 ---
 
-## 🎯 Interview Talking Points
-
-**"Walk me through this project"**
-
-> "Olist, a Brazilian e-commerce platform, had 100,000 orders but no visibility into which customers drove revenue. I used RFM analysis in MySQL to segment their 100,000 customers into 7 strategic groups. 
->
-> I discovered that just 17% of customers—the 'Champions'—generated 61% of total revenue, or $5.6M. Even more critical, I identified 1,286 high-value customers who hadn't purchased in 90+ days, representing $1.2M in at-risk revenue.
->
-> I built an interactive Tableau dashboard showing these insights and recommended launching a targeted win-back campaign with an expected 154% ROI. The analysis also revealed opportunities to reallocate $150K+ in marketing budget from low-value segments to high-value customers."
-
-**"What was the business impact?"**
-
-> "Three immediate impacts: First, identified $1.2M in recoverable revenue with a clear action plan. Second, showed that protecting the Champions segment was critical—they drive 61% of revenue. Third, demonstrated that 55% of the customer base generates only 13% of revenue, indicating massive opportunity to reallocate marketing spend for better ROI."
-
-**"What would you do differently or add?"**
-
-> "I'd add predictive churn modeling using the customer behavioral data—build a model that flags customers before they become at-risk. I'd also incorporate product category analysis to see which products Champions prefer, enabling better cross-sell recommendations. Finally, I'd track cohorts over time to measure retention rates by acquisition channel."
-
----
 
 ## 📚 Dataset Information
 
